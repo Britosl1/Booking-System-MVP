@@ -1,4 +1,4 @@
-export interface Services {
+export interface Service {
     id: string;
     name: string;
     duration: string;
@@ -6,11 +6,11 @@ export interface Services {
     description: string;
 }
 
-export interface Centers {
+export interface Center {
     id: string;
     name: string;
     email: string;
     logo: string;
     description: string;
-    services: Services[];
+    services: Service[];
 }

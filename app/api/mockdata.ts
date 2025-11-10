@@ -1,6 +1,6 @@
-import { Centers } from "@/interfaces";
+import { Center } from "@/interfaces";
 
-export const mockCenters: Centers[] = [
+export const mockCenters: Center[] = [
   {
     id: "luxury-beauty-spa",
     name: "Luxury Beauty Spa",
