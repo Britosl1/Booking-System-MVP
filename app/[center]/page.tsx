@@ -17,6 +17,7 @@ import { SubmitHandler } from "react-hook-form";
 
 export default function CenterPage() {
   const { center: id } = useParams();
+  console.log('id is here?', id)
   const { data: centers, error, isLoading } = useCenter(id as string);
   const { open, setOpen } = useModal();
   const { toast, setToast } = useToast();
