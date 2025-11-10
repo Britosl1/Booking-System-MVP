@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Booking System
+
+A modern Next.js booking system built with TypeScript, Tailwind CSS, Redux, React Query, and React Hook Form + Zod.
+
+## Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first CSS framework
+- **Redux Toolkit** - State management
+- **React Query (TanStack Query)** - Server state management
+- **React Hook Form** - Form handling
+- **Zod** - Schema validation
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout with providers
+│   ├── page.tsx           # Home page
+│   └── examples/          # Example components
+├── lib/                   # Library code
+│   ├── store.ts          # Redux store configuration
+│   ├── hooks.ts          # Custom Redux hooks
+│   └── providers.tsx     # Redux & React Query providers
+└── public/               # Static assets
+```
+
+## Usage Examples
+
+### Redux Store
+
+Use the typed hooks in your components:
+
+```typescript
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+
+// In your component
+const dispatch = useAppDispatch();
+const someState = useAppSelector((state) => state.someSlice);
+```
+
+### React Query
+
+```typescript
+import { useQuery, useMutation } from '@tanstack/react-query';
+
+// Fetch data
+const { data, isLoading } = useQuery({
+  queryKey: ['key'],
+  queryFn: fetchFunction,
+});
+
+// Mutate data
+const mutation = useMutation({
+  mutationFn: updateFunction,
+});
+```
+
+### Form Validation (React Hook Form + Zod)
+
+See `app/examples/form-example.tsx` for a complete example.
+
+```typescript
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+
+const schema = z.object({
+  email: z.string().email(),
+});
+
+const { register, handleSubmit } = useForm({
+  resolver: zodResolver(schema),
+});
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [TanStack Query](https://tanstack.com/query/latest)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zod](https://zod.dev/)

@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #fff;
+  --pink-color: #F39AB3;
+  --orange-color: #e09148;
 }
 
 @theme inline {

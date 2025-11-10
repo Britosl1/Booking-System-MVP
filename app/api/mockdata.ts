@@ -1,0 +1,115 @@
+import { Centers } from "@/interfaces";
+
+export const mockCenters: Centers[] = [
+  {
+    id: "luxury-beauty-spa",
+    name: "Luxury Beauty Spa",
+    email: "contact@luxurybeautyspa.com",
+    logo: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400",
+    description: "Experience ultimate relaxation and rejuvenation at our premium spa. We offer personalized beauty treatments in a tranquil, luxurious environment.",
+    services: [
+      {
+        id: "lbs-001",
+        name: "Signature Facial Treatment",
+        duration: "60",
+        price: "85",
+        description: "Deep cleansing facial with custom mask, massage, and serum application for radiant, glowing skin.",
+      },
+      {
+        id: "lbs-002",
+        name: "Hot Stone Massage",
+        duration: "90",
+        price: "120",
+        description: "Full-body relaxation massage using heated volcanic stones to release tension and improve circulation.",
+      },
+      {
+        id: "lbs-003",
+        name: "Luxury Manicure & Pedicure",
+        duration: "75",
+        price: "95",
+        description: "Complete nail care package including shaping, cuticle treatment, massage, and premium polish application.",
+      },
+      {
+        id: "lbs-004",
+        name: "Hair Styling & Blow Dry",
+        duration: "45",
+        price: "65",
+        description: "Professional wash, conditioning treatment, and expert blow-dry styling for any occasion.",
+      },
+    ],
+  },
+  {
+    id: "radiant-glow-studio",
+    name: "Radiant Glow Studio",
+    email: "hello@radiantglowstudio.com",
+    logo: "https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?w=400",
+    description: "Modern beauty studio specializing in skincare and makeup artistry. We help you discover your natural radiance with cutting-edge treatments.",
+    services: [
+      {
+        id: "rgs-001",
+        name: "Hydrafacial Treatment",
+        duration: "50",
+        price: "110",
+        description: "Advanced hydradermabrasion treatment that cleanses, exfoliates, and hydrates for instantly glowing skin.",
+      },
+      {
+        id: "rgs-002",
+        name: "Professional Makeup Application",
+        duration: "60",
+        price: "80",
+        description: "Full-face makeup application for special events, photo shoots, or everyday glam by expert artists.",
+      },
+      {
+        id: "rgs-003",
+        name: "Microneedling Session",
+        duration: "75",
+        price: "150",
+        description: "Collagen-inducing treatment to reduce fine lines, scars, and improve overall skin texture.",
+      },
+      {
+        id: "rgs-004",
+        name: "Brow Shaping & Tinting",
+        duration: "30",
+        price: "45",
+        description: "Expert eyebrow shaping with precision waxing or threading, plus optional tinting for defined brows.",
+      },
+    ],
+  },
+  {
+    id: "serenity-wellness-center",
+    name: "Serenity Wellness Center",
+    email: "info@serenitywellness.com",
+    logo: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400",
+    description: "Holistic beauty and wellness center focused on natural treatments and therapeutic services for body, mind, and soul.",
+    services: [
+      {
+        id: "swc-001",
+        name: "Swedish Relaxation Massage",
+        duration: "60",
+        price: "90",
+        description: "Classic massage technique using long, flowing strokes to reduce stress and promote deep relaxation.",
+      },
+      {
+        id: "swc-002",
+        name: "Aromatherapy Body Wrap",
+        duration: "80",
+        price: "105",
+        description: "Detoxifying body wrap infused with essential oils to nourish skin and eliminate toxins.",
+      },
+      {
+        id: "swc-003",
+        name: "Organic Facial & Scalp Treatment",
+        duration: "70",
+        price: "95",
+        description: "Natural, chemical-free facial combined with therapeutic scalp massage using organic products.",
+      },
+      {
+        id: "swc-004",
+        name: "Reflexology Foot Treatment",
+        duration: "45",
+        price: "60",
+        description: "Pressure point therapy on feet to promote healing, balance, and relaxation throughout the body.",
+      },
+    ],
+  },
+];
