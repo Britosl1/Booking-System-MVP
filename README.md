@@ -25,7 +25,6 @@ A modern Next.js booking system built with TypeScript, Tailwind CSS, Redux, Reac
 Before running this application, make sure you have the following installed:
 
 - **Node.js** (v18 or higher)
-- **npm** (v9 or higher) or **yarn**
 
 ## 🏃 Running the Application Locally
 
@@ -70,13 +69,10 @@ Navigate to [http://localhost:3000](http://localhost:3000) to view the applicati
 ### High Priority
 1. **User Authentication & Authorization**
    - User login/registration system
-   - Role-based access control (customers, staff, admin)
-   - Session management
 
 2. **Backend Integration**
    - Replace mock data with real API endpoints
-   - Database integration (PostgreSQL/MongoDB)
-   - Proper error handling and validation
+   - Database integration (PostgreSQL)
 
 
 ## 📁 Project Structure
