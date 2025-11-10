@@ -1,24 +1,32 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { mockCenters } from "../../mockdata";
 
-type Params = Promise<{ center: string }> | { center: string };
-
 export async function GET(
-  request: NextRequest,
-  context: { params: Params }
+  _req: Request,
+  context: any
 ) {
-  // Handle both Promise and non-Promise params for compatibility
-  const resolvedParams = context.params instanceof Promise 
-    ? await context.params 
-    : context.params;
-  
-  const id = resolvedParams.center;
+  try {
+    // Handle both async (Next.js 16) and sync (Vercel) params
+    let params = context.params;
+    if (params && typeof params.then === 'function') {
+      params = await params;
+    }
+    
+    const id = params?.center;
 
-  const center = mockCenters.find((c) => c.id === id);
+    if (!id) {
+      return NextResponse.json({ error: "No center ID provided" }, { status: 400 });
+    }
 
-  if (!center) {
-    return NextResponse.json({ error: "Center not found" }, { status: 404 });
+    const center = mockCenters.find((c) => c.id === id);
+
+    if (!center) {
+      return NextResponse.json({ error: "Center not found" }, { status: 404 });
+    }
+
+    return NextResponse.json(center);
+  } catch (error) {
+    console.error("API Error:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
-
-  return NextResponse.json(center);
 }
