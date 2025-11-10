@@ -1,11 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { mockCenters } from "../../mockdata";
 
+type Params = Promise<{ center: string }> | { center: string };
+
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ center: string }> }
+  context: { params: Params }
 ) {
-  const id = (await params).center;
+  // Handle both Promise and non-Promise params for compatibility
+  const resolvedParams = context.params instanceof Promise 
+    ? await context.params 
+    : context.params;
+  
+  const id = resolvedParams.center;
 
   const center = mockCenters.find((c) => c.id === id);
 
