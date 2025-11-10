@@ -18,7 +18,7 @@ export const centersApi = {
   },
 
   getById: async (id: string): Promise<Center> => {
-    return fetchApi<Center>(`/api/centers/${id}`);
+    return fetchApi<Center>(`/api/centerId/${id}`);
   },
 };
 
