@@ -63,6 +63,13 @@ Navigate to [http://localhost:3000](http://localhost:3000) to view the applicati
 - Mock data generation
 - Small code adjustments and refactoring
 
+<img width="1542" height="985" alt="image" src="https://github.com/user-attachments/assets/1808e561-2faf-447e-b298-f2fbf8f9d11c" />
+<img width="1542" height="985" alt="image" src="https://github.com/user-attachments/assets/2a8a27cc-b683-4755-b6f6-69d4e0fe2a22" />
+<img width="1542" height="985" alt="image" src="https://github.com/user-attachments/assets/d9804873-24f4-40f3-9248-9cd17cc8bf57" />
+<img width="2045" height="971" alt="image" src="https://github.com/user-attachments/assets/65f1ce93-5daa-4fbb-97a0-646e7aac8beb" />
+
+
+
 
 ## 🚀 Features to Implement with More Time
 
